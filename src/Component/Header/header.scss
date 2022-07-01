@@ -1,0 +1,142 @@
+@import "../../Style/variable.scss";
+@import "../../Style/base.scss";
+
+.header {
+    &-center {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #f6f6f6;
+        padding: 1.6rem;
+        .header-left h1 {
+            position: relative;
+            z-index: 2;
+            font-weight: 300;
+            padding: 0.5rem;
+        }
+        .header-left {
+            display: inline-flex;
+            justify-content: center;
+            position: relative;
+            a{
+                font-size: 2.4rem;
+                    text-decoration: none;
+                    color: #f6f6f6;        
+
+            }
+            h1 {
+                margin: 0;
+                padding: 8px;
+                position: relative;
+                color: #999;
+                a {
+                    font-size: 2.4rem;
+                    text-decoration: none;
+                    color: #999;
+                    font-weight: 100;
+                    span {
+                        color: #fff;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .header-left::after {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg);
+            background-color: #016a78;
+            box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 75%);
+        }
+        &-nav {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             li {
+                list-style: none;
+                a {
+                    color: #424242;
+                    font-size: 1.6rem;
+                    text-decoration: none;
+                }
+            }
+        }
+        &-nav li a {
+            padding: 1.6rem;
+            margin: 1.6rem;
+            border-bottom: 1px solid #ccc;
+        }
+        &-nav li a:hover {
+            color: #016a78;
+            border-bottom: 1px solid #016a78;
+        }
+        &-right {
+            position: relative;
+            .header--right-item {
+                list-style: none;
+                display: inline-flex;
+                i {
+                    font-size: 2rem;
+                    padding: 8px;
+                    color: black;
+                }
+            }
+            .bridge::before {
+                content: "";
+                position: absolute;
+                top: 79%;
+                right: 40%;
+                width: 34px;
+                height: 29px;
+            }
+            .login-form {
+                top: 140%;
+                z-index: 10;
+                right: -120%;
+                background-color: #f6f6f6;
+                border: 1px solid #ddd;
+                position: absolute;
+                flex-direction: column;
+                padding: 1rem;
+                margin-right: 1rem;
+                font-size: 1.5rem;
+                animation: headerGrowth ease-in 0.3s;
+                display: none;
+                input {
+                    border: #999 solid 1px;
+                    padding: 5px;
+                    margin: 0.5rem;
+                }
+                button {
+                    margin: 00.5rem;
+                    background-color: $blue;
+                    color: #f6f6f6;
+                    padding: 0.25rem 0.5rem;
+                    border: none;
+                    cursor: pointer;
+                    transition: all ease-in-out 0.3s;
+                }
+            }
+            .header--hover-icon:hover .login-form {
+                display: flex;
+            }
+        }
+    }
+    @keyframes headerGrowth {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+    
+}

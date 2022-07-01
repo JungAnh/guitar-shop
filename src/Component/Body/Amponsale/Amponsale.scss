@@ -1,0 +1,211 @@
+@import"../../../Style/variable.scss";
+
+body {
+    background: #f6f6f6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 25px;
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-body {
+    .header-wrap {
+        .header-wrap-item {
+            margin: 32px 0px;
+            line-height: 5rem;
+            align-items: center;
+            width: 90vw;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            color: #016a78;
+            font-size: 24px;
+            font-weight: 550;
+        }
+    }
+}
+
+.container-swiper {
+    width: 90vw;
+    height: 373px;
+    margin: 2rem auto;
+
+
+    .swiper-body {
+        background-color: #f6f6f6;
+        border: 1px solid #eee;
+        padding: 16px 16px 4px 16px;
+        display: -webkit-flex;
+        display: flex;
+        width: 391px;
+        height: 369px;
+        flex-direction: column;
+       
+        align-items: center;
+        position: relative;
+        margin: 16px;
+
+        &-on-sale {
+            position: absolute;
+            font-size: 1.5rem;
+            color: $gray;
+            z-index: 1;
+            right: 5%;
+            top: 28%;
+            text-align: center;
+            padding: 0.05rem 0.35rem;
+        }
+
+        &-on-sale::before {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg);
+            background-color: #d80e2f;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 75%);
+        }
+
+        &-top-seller {
+            position: absolute;
+            font-size: 1.5rem;
+            color: $gray;
+            z-index: 1;
+            right: 5%;
+            top: 38%;
+            text-align: center;
+            padding: 0.05rem 0.35rem;
+        }
+
+        &-top-seller::before {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            -webkit-transform: skewX(-15deg);
+            transform: skewX(-15deg);
+            background-color: #2ec4b6;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 75%);
+        }
+
+        &-img{
+            width: 250px;
+            min-height: 250px;
+            img{
+                width: 100%;
+                object-fit: initial;
+            }            
+        }
+
+        &-info-box {
+
+            width: 100%;
+
+
+            h3 {
+                margin: 0;
+                display: flex;
+
+                font-size: 20px;
+                font-weight: 550;
+                align-items: flex-end;
+
+                a {
+                    color: #016a78;
+                    text-decoration: none;
+                }
+            }
+
+            .type-rating {
+                color: #999;
+                font-size: 15px;
+                display: flex;
+                justify-content: space-between;
+
+                .start {
+                    color: #ffcc02;
+                }
+            }
+        }
+
+        &-price-box {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .price {
+                h2 {
+                    display: flex;
+                    color: #016a78;
+                    margin: 0;
+                }
+                p{
+                    margin: 0;
+                    i{  
+                        color: #016a78;
+                        align-items: center;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .control{
+                margin-top: 15px;
+                color: #424242;
+            }
+        }
+    }
+
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 25px;
+}
+.container{
+    max-width: 1850px;
+}
